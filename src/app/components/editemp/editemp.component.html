@@ -1,0 +1,24 @@
+<h2 class="text-center m-5">Edit Employee </h2>
+<form (ngSubmit)="editEmp()">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="empname" [(ngModel)]="empname" id="floatingInput" placeholder="Enter name">
+        <label for="floatingInput">Name</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="email" [(ngModel)]="email" id="floatingEmail" placeholder="Email">
+        <label for="floatingEmail">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="contact" [(ngModel)]="contact" id="floatingContact" placeholder="contact number">
+        <label for="floatingContact">Contact</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="address" [(ngModel)]="address" id="floatingAddress" placeholder="Address">
+        <label for="floatingAddress">Address</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="department" [(ngModel)]="department" id="floatingDepartment" placeholder="Department">
+        <label for="floatingDepartment">Department</label>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-success" />
+</form>

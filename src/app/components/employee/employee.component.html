@@ -1,0 +1,30 @@
+<h2 class="text-center m-5">Employee Details</h2>
+<a routerLink="/addemp" class="btn btn-primary">Add Employee</a>
+<table class="table table-stripped table-responsive">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Department</th>
+            <th colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empData; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{emp.empname}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.contact}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.department}}</td>
+            <td>
+                <a [routerLink]="['/editemp/', emp.id]" class="btn btn-info me-1" >Edit</a>
+                <a (click)="deleteEmp(emp.id)" class="btn btn-danger" >Delete</a>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
